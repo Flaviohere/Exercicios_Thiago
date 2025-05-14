@@ -5,7 +5,8 @@ int main() {
     int n;
     cin >> n;
 
-    float vetor[n], soma = 0;
+    float vetor[n];
+    float soma = 0;
 
     for (int i = 0; i < n; i++) {
         cin >> vetor[i];
@@ -13,11 +14,13 @@ int main() {
     }
 
     float media = soma / n;
-    cout << fixed << setprecision(3) << media << endl;
+    printf("Media: %.2f\n", media);
+
+    printf("Abaixo da media:\n");
 
     for (int i = 0; i < n; i++) {
         if (vetor[i] < media) {
-            cout << fixed << setprecision(1) << vetor[i] << endl;
+            printf("%.2f\n", vetor[i]);
         }
     }
 
