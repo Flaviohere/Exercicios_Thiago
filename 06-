@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    string nome[n];
+    int idade[n];
+
+    for (int i = 0; i < n; i++) {
+        cin >> nome[i] >> idade[i];
+    }
+
+    int mais_velho = idade[0];
+    int posicao = 0;
+
+    for (int i = 1; i < n; i++) {
+        if (idade[i] > mais_velho) {
+            mais_velho = idade[i];
+            posicao = i;
+        }
+    }
+
+    cout << "Pessoa mais velha: " << nome[posicao] << endl;
+
+    return 0;
+}
