@@ -5,22 +5,14 @@ int main() {
     int n;
     cin >> n;
 
-    int vetor[n], soma = 0, qtd = 0;
+    int vetor[n];
+    int soma = 0;
 
     for (int i = 0; i < n; i++) {
         cin >> vetor[i];
-        if (vetor[i] % 2 == 0) {
-            soma += vetor[i];
-            qtd++;
-        }
+        soma += vetor[i];
     }
-
-    if (qtd > 0) {
-        float media = (float)soma / qtd;
-        cout << fixed << setprecision(1) << media << endl;
-    } else {
-        cout << "Nenhum número par." << endl;
-    }
-
-    return 0;
+    
+    int media = soma / n;
+    printf("Media: %d.0", media);
 }
