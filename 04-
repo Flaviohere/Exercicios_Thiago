@@ -6,23 +6,22 @@ int main() {
     cin >> n;
 
     float vetor[n];
-    float soma = 0;
+    float media = 0;
 
     for (int i = 0; i < n; i++) {
         cin >> vetor[i];
-        soma += vetor[i];
+        media += vetor[i];  
     }
-
-    float media = soma / n;
-    printf("Media: %.2f\n", media);
-
-    printf("Abaixo da media:\n");
-
+    
+    media = media / n;
+    
+    printf("media: %.3f\n", media);
+    printf("numeros a baixo da media:\n");
+    
     for (int i = 0; i < n; i++) {
         if (vetor[i] < media) {
-            printf("%.2f\n", vetor[i]);
+            printf("%.1f\n", vetor[i]);
         }
     }
-
-    return 0;
+    
 }
