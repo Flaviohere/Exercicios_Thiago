@@ -6,23 +6,18 @@ int main() {
     cin >> n;
 
     float vetor[n];
-
-    for (int i = 0; i < n; i++) {
-        cin >> vetor[i];
-    }
-
+    
+    cin >> vetor [0];
     float maior = vetor[0];
     int posicao = 0;
 
     for (int i = 1; i < n; i++) {
-        if (vetor[i] >= maior) {
+        cin >> vetor[i];
+        if (vetor[i] > maior) {
             maior = vetor[i];
             posicao = i;
+            
         }
     }
-
-    cout << "Maior valor: " << maior << endl;
-    cout << "Posição: " << posicao << endl;
-
-    return 0;
+    printf("maior: %.1f na posicao: %d", maior, posicao);
 }
