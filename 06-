@@ -7,22 +7,14 @@ int main() {
 
     string nome[n];
     int idade[n];
+    int velho = 0;
 
     for (int i = 0; i < n; i++) {
         cin >> nome[i] >> idade[i];
-    }
-
-    int mais_velho = idade[0];
-    int posicao = 0;
-
-    for (int i = 1; i < n; i++) {
-        if (idade[i] > mais_velho) {
-            mais_velho = idade[i];
-            posicao = i;
+        if (idade[i] > idade[velho]) {
+            velho = i;
         }
     }
-
-    cout << "Pessoa mais velha: " << nome[posicao] << endl;
-
-    return 0;
+    printf("Pessoa mais velha: %s", nome[velho].c_str());
+    
 }
