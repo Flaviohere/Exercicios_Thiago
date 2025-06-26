@@ -51,7 +51,7 @@ int main() {
     float media_turma = avg(students, n);
     cout << "Media da turma: " << media_turma << endl;
 
-    int acima_media = countAboveAverage(students, n, media_turma);
+    int acima_media = count_above_average(students, n, media_turma);
     cout << "Alunos com media maior ou igual a media da turma: " << acima_media << endl;
 
 
