@@ -27,7 +27,7 @@ float avg(Student V[], int n) {
     return media / n;
 }
 
-int countAboveAverage(Student V[], int n, float media) {
+int count_above_average(Student V[], int n, float media) {
     int contador = 0;
     for (int i = 0; i < n; i++) {
         if (V[i].average >= media) {
